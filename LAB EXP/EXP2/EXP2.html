@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Room Booking</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f2f2f2;
+margin:20px;
+}
+
+.container{
+width:450px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 10px gray;
+}
+
+input,select{
+width:100%;
+padding:8px;
+margin:8px 0;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#007BFF;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Hotel Room Booking</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Destination</label>
+<input type="text" required>
+
+<label>Check-in Date</label>
+<input type="date" required>
+
+<label>Check-out Date</label>
+<input type="date" required>
+
+<label>Guests</label>
+<input type="number" min="1" required>
+
+<label>Room Type</label>
+
+<select>
+<option>Standard</option>
+<option>Deluxe</option>
+<option>Suite</option>
+<option>Executive</option>
+</select>
+
+<button type="submit">
+Book Now
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
