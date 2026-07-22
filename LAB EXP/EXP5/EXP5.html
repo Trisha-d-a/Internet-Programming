@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Flight Reservation</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+.container{
+    width:500px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+input,select{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:#0077cc;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{
+    background:#005fa3;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Online Flight Reservation</h2>
+
+<form action="/bookFlight" method="POST">
+
+<label>Passenger Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>From</label>
+<input type="text" name="source" required>
+
+<label>To</label>
+<input type="text" name="destination" required>
+
+<label>Travel Date</label>
+<input type="date" name="date" required>
+
+<label>Flight Class</label>
+<select name="class">
+    <option>Economy</option>
+    <option>Premium Economy</option>
+    <option>Business</option>
+    <option>First Class</option>
+</select>
+
+<label>Seat Preference</label>
+<select name="seat">
+    <option>Window</option>
+    <option>Middle</option>
+    <option>Aisle</option>
+</select>
+
+<label>Number of Passengers</label>
+<input type="number" name="passengers" min="1" required>
+
+<button type="submit">Book Flight</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
