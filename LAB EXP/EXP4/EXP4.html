@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Train Reservation</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+.container{
+    width:500px;
+    margin:30px auto;
+    background:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+input,select{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:#0066cc;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{
+    background:#004d99;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Online Train Reservation</h2>
+
+<form action="/reserve" method="POST">
+
+<label>Passenger Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Origin Station</label>
+<input type="text" name="source" required>
+
+<label>Destination Station</label>
+<input type="text" name="destination" required>
+
+<label>Journey Date</label>
+<input type="date" name="date" required>
+
+<label>Train Class</label>
+<select name="class">
+    <option>Sleeper</option>
+    <option>AC 3 Tier</option>
+    <option>AC 2 Tier</option>
+    <option>First Class AC</option>
+</select>
+
+<label>Passenger Age</label>
+<input type="number" name="age" min="1" required>
+
+<label>Seat Preference</label>
+<select name="seat">
+    <option>Window</option>
+    <option>Middle</option>
+    <option>Aisle</option>
+</select>
+
+<button type="submit">Reserve Ticket</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
