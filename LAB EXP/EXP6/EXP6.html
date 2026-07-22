@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Cake Ordering System</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+.container{
+    width:500px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+input,select,textarea{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:#e91e63;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{
+    background:#c2185b;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Online Cake Ordering System</h2>
+
+<form action="/placeOrder" method="POST">
+
+<label>Customer Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Cake Category</label>
+<select name="category">
+    <option>Birthday Cake</option>
+    <option>Wedding Cake</option>
+    <option>Anniversary Cake</option>
+    <option>Custom Cake</option>
+</select>
+
+<label>Flavor</label>
+<select name="flavor">
+    <option>Chocolate</option>
+    <option>Vanilla</option>
+    <option>Black Forest</option>
+    <option>Red Velvet</option>
+</select>
+
+<label>Size</label>
+<select name="size">
+    <option>0.5 Kg</option>
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+</select>
+
+<label>Message on Cake</label>
+<input type="text" name="message">
+
+<label>Delivery Address</label>
+<textarea name="address" rows="3" required></textarea>
+
+<button type="submit">Place Order</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
